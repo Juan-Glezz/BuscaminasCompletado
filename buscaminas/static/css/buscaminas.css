@@ -1,0 +1,41 @@
+body{
+    background-image:  url("https://s03.s3c.es/imag/_v0/1200x655/f/d/1/Buscaminas.jpg"); 
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 130%;
+}
+
+h1 {
+    text-align: center;
+    font-size: 3em;
+    color: #42b116;
+    background-image: none;
+    background-color: transparent;
+    font-style: italic;
+  }
+
+
+table{
+    color: #fff;
+    border: 6px solid #000000;
+    margin: 20px 0px;
+   background-color: #fff;
+}
+
+table td{
+   border-collapse: collapse;
+    border: 2px solid #0a0a0a;
+}
+.edit{
+    margin-left: 700px;
+    font-size: medium;
+    color: #000000;
+    font-style: italic;
+}
+button{
+    margin-left: 1000px;
+    background-color: forestgreen;
+    border-radius: 10px;
+    width: 90px;
+    height: 70px;
+}

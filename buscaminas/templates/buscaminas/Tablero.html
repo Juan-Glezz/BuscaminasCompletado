@@ -1,0 +1,56 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="{% static 'css/buscaminas.css' %}" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Lora:wght@500&display=swap"
+      rel="stylesheet"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Formulario de Buscaminas</title>
+  </head>
+  <body>
+    <h1>Completa el formulario para crear un tablero</h1>
+  
+    <form  action="{% url 'TableroBuscaminas' %}" method="get">
+      {% for field in table_form %}
+      <div class="edit">
+        <br>
+        <label for="{{ field.name }}">{{ field.label }}</label>
+        {{ field }}
+      </div>
+      {% endfor %}
+   
+      <br>
+      <button  type="submit" >Crear tabla</button>
+    </form>
+
+<center>
+    <div>
+      {% if columna and fila %}
+    
+    <table border="1">
+      {% for row in fila %}
+     
+      <tr>
+        {% for col in columna %}
+        <td>
+            ㅤㅤㅤ
+         <br>
+         ㅤㅤㅤ
+
+        </td>
+        {% endfor %}
+      </tr>
+      {% endfor %}
+    </table>
+
+    {% endif %}
+    </div>
+</center>
+  </body>
+</html>
