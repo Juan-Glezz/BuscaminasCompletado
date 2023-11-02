@@ -9,8 +9,8 @@ def index(req):
 
 
 def form_tablero(request):
-    if request.method == 'GET':
-        table_form = tableForm(request.GET)
+    if request.method == 'POST':
+        table_form = tableForm(request.POST)
         table_form_v = tableForm()
         if table_form.is_valid():
            
