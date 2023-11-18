@@ -3,31 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Tablero</title>
 </head>
 <body>
     <center>
-        <div>
-          {% if columna and fila %}
-        
-        <table border="1">
-          {% for row in fila %}
-         
-          <tr>
-            {% for col in columna %}
-            <td>
-                ㅤㅤㅤ
-             <br>
-             ㅤㅤㅤ
-    
-            </td>
-            {% endfor %}
-          </tr>
-          {% endfor %}
-        </table>
-    
-        {% endif %}
-        </div>
+      <table border="1">
+        {% for fila in tablero %}
+            <tr>
+                {% for celda in fila %}
+                    <td>{{ celda }}</td>
+                {% endfor %}
+            </tr>
+        {% endfor %}
+    </table>
     </center>
 </body>
 </html>

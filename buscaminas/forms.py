@@ -11,9 +11,13 @@ class tableForm(forms.Form):
         columna = cleaned_data.get("columna")
         minas = cleaned_data.get("minas")
 
-        if minas > ((fila * columna) / 2):
-            raise ValidationError(
-                "Has introducido una cantidad superior de minas impuestas."
+        if minas:
+            if minas > ((fila * columna) / 2):
+                raise ValidationError(
+                    "Has introducido una cantidad superior de minas impuestas."
+                    )
+            if minas<0:
+                raise ValidationError(
+                    "El numero de minas no puede ser negativo"
                 )
-
         return cleaned_data
