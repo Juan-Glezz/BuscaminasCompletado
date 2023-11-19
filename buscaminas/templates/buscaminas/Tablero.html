@@ -16,6 +16,14 @@
   <body>
     <h1>Completa el formulario para crear un tablero</h1>
   
+    <!-- Este form indica que el formulario devuelto sera asi por el  metodo post -->
+    <!-- csrf_token es una etiqueta de seguridad necesearia para proteger el fromulario -->
+    <!-- form.non_field_errors  muestra mensaje de error no realcionada con un campo especifico del fromulario-->
+    <!-- class="form-group": genera un contenedor para agrupar un campo del formulario junto con su etiqueta. -->
+    <!-- form.fila.label_tag: muestra la etiqueta del campo fila -->
+    <!-- form.columna.label_tag: muestra la etiqueta del campo columna -->
+    <!-- form.minas.label_tag: muestra la etiqueta del campo minas -->
+    <!-- form.fila/columana/minas: muestra el campo del formulario -->
     <form method="post">
       {% csrf_token %}
       {{ form.non_field_errors }}

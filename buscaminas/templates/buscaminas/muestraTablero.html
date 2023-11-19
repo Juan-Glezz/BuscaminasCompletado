@@ -8,8 +8,10 @@
 <body>
     <center>
       <table border="1">
+    <!-- este for recorre la cada fila en la lista tablero y crea una <tr> que representa una filaen la tabla -->
         {% for fila in tablero %}
             <tr>
+                <!-- Este for se utiliza para recorer cada celda en la fila y para cada celda se crea una <td> que contenga la informacion de dicha celda -->
                 {% for celda in fila %}
                     <td>{{ celda }}</td>
                 {% endfor %}
